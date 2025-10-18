@@ -8,7 +8,7 @@ These panels maintain their own 'app catalogs' for one-click installs; until you
 
 ## [Cloudron](https://cloudron.io)
 
-Installing custom apps from [the Docker Hub image](https://hub.docker.com/repository/docker/0data/1click-proof/tags/cloudron) is done via the [Cloudron CLI](https://docs.cloudron.io/packaging/cli/).
+Installing from [the Docker Hub image for Cloudron](https://hub.docker.com/repository/docker/0data/1click-proof/tags/cloudron) is done via the [Cloudron CLI](https://docs.cloudron.io/packaging/cli/).
 
 First clone the project locally:
 
