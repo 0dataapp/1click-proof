@@ -1,6 +1,6 @@
 # 1click-proof
 
-Sample Node.js app demonstrating [one-click](https://easyindie.app) deploys to self-hosted panels.
+Sample Node.js app demonstrating how to package for [one-click](https://easyindie.app) deploys to self-hosted panels.
 
 Each request writes a file to the local filesystem, which should persist between restarts; set the destination directory via a `DATA_DIRECTORY` environment variable. Requests to `/skip-write` will not write a file.
 
