@@ -1,6 +1,6 @@
 # 1click-proof
 
-Sample Node.js app that can be [one-click](https://easyindie.app) deployed to self-hosted servers.
+Sample Node.js app that can be [one-click](https://easyindie.app) deployed to self-hosted panels.
 
 Each request writes a file to the local filesystem, which should persist between restarts; set the destination directory via a `DATA_DIRECTORY` environment variable.
 
