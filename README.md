@@ -15,7 +15,7 @@ git clone https://github.com/0dataapp/1click-proof
 cd 1click-proof
 ```
 
-Then from the project, run the `install` command:
+Then from the project directory, run the `install` command:
 
 ```
 cloudron install --image 0data/1click-proof:cloudron --location 1click-proof
