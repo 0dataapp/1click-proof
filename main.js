@@ -8,11 +8,17 @@ require('http').createServer((req, res) => {
 
   const destination = path.join(process.env.DATA_DIRECTORY || __dirname, '__local', date.valueOf() + '.txt');
 
-  if (!fs.existsSync(path.dirname(destination))){
-    fs.mkdirSync(path.dirname(destination));
-  }
+  function writeLocalFile () {
+    if (!fs.existsSync(path.dirname(destination))){
+      fs.mkdirSync(path.dirname(destination));
+    }
 
-  fs.writeFileSync(destination, '');
+    fs.writeFileSync(destination, '');
+  };
+
+  if (req.url !== '/skip-write') {
+    writeLocalFile();
+  }
 
   res.writeHead(200, {
     'Content-Type': 'text/plain',
