@@ -14,4 +14,4 @@ EXPOSE 3000
 
 ENV DATA_DIRECTORY /app/data/
 
-CMD [ "/app/code/cloudron-start.sh" ]
+CMD [ "/app/code/cloudron/start.sh" ]

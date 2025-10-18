@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ensure that this file executable in the app repo: chmod +x cloudron-start.sh.
+# ensure that this file executable in the app repo: chmod +x start.sh.
 
 mkdir -p /app/data/__local
 chown -R cloudron:cloudron /app/data/__local/
