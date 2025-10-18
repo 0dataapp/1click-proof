@@ -4,6 +4,8 @@ Sample Node.js app demonstrating [one-click](https://easyindie.app) deploys to s
 
 Each request writes a file to the local filesystem, which should persist between restarts; set the destination directory via a `DATA_DIRECTORY` environment variable. Requests to `/skip-write` will not write a file.
 
+These panels maintain their own 'app catalogs' for one-click installs; until your app is included there, it will require more clicks to setup. Below are instructions for each platform so that you can test easily before submission.
+
 ## [Cloudron](https://cloudron.io)
 
 Installing custom apps from [the Docker Hub image](https://hub.docker.com/repository/docker/0data/1click-proof/tags/cloudron) is done via the [Cloudron CLI](https://docs.cloudron.io/packaging/cli/).
