@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "healthCheckPath": "/skip-write",
+  "healthCheckPath": "/",
   "httpPort": 3000,
   "addons": {
     "localstorage": {}

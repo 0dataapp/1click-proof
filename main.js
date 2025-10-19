@@ -3,31 +3,58 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 
-require('http').createServer((req, res) => {
-  const date = new Date();
+const data = {
+  requests: 0,
+};
+const dataPath = path.join(process.env.DATA_DIRECTORY || __dirname, '__local', 'data.json');
 
-  const destination = path.join(process.env.DATA_DIRECTORY || __dirname, '__local', date.valueOf() + '.txt');
+function uSerial2 (inputData) {
+  return inputData.reduce(async function (coll, e) {
+    return (await coll).concat(await new Promise(function (res, rej) {
+      try {
+        res(e());
+      } catch (error) {
+        rej(error);
+      }
+    }));
+  }, Promise.resolve([]));
+};
 
-  function writeLocalFile () {
-    if (!fs.existsSync(path.dirname(destination))){
-      fs.mkdirSync(path.dirname(destination));
+const mod = {
+
+  handle (req, res) {
+    data.requests += 1;
+
+    res.writeHead(200, {
+      'Content-Type': 'text/plain',
+    });
+    res.end([
+      'Hello!',
+      'Request time: ' + new Date().toJSON(),
+      'Total requests: ' + data.requests,
+    ].join('\n\n'));
+    fs.writeFileSync(dataPath, JSON.stringify(data));
+  },
+
+  setupData () {
+    if (!fs.existsSync(path.dirname(dataPath))){
+      fs.mkdirSync(path.dirname(dataPath));
     }
 
-    fs.writeFileSync(destination, '');
-  };
+    if (!fs.existsSync(dataPath)){
+      fs.writeFileSync(dataPath, JSON.stringify(data));
+    }
 
-  if (req.url !== '/skip-write') {
-    writeLocalFile();
-  }
+    Object.assign(data, JSON.parse(fs.readFileSync(dataPath, 'utf8')));
+  },
 
-  res.writeHead(200, {
-    'Content-Type': 'text/plain',
-  });
-  res.end([
-    'Hello!',
-    'Request time: ' + date.toJSON(),
-    'Local Files: ' + fs.readdirSync(path.dirname(destination)).filter(e => e.endsWith('.txt')).length,
-  ].join('\n\n'));
-}).listen(port);
+  setupServer () {
+    require('http').createServer(mod.handle).listen(port);
 
-console.log(`Listening on port ${ port }`);
+    console.log(`Listening on port ${ port }`);
+  },
+
+};
+
+uSerial2(Object.keys(mod).filter(e => e.startsWith('setup')).map(e => mod[e]));
+

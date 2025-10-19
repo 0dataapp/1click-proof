@@ -2,7 +2,7 @@
 
 Sample Node.js app demonstrating how to package for [one-click](https://easyindie.app) deploys to self-hosted panels.
 
-Each request writes a file to the local filesystem, which should persist between restarts; set the destination directory via a `DATA_DIRECTORY` environment variable. Requests to `/skip-write` will not write a file.
+Each request increments a count that's stored on the local filesystem, which should persist between restarts; set the destination directory via a `DATA_DIRECTORY` environment variable.
 
 These panels maintain their own 'app catalogs' for one-click installs; until your app is included there, it will require more clicks to setup. Below are instructions for each platform so that you can test easily before submission.
 
