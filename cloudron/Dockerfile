@@ -4,14 +4,14 @@ RUN mkdir -p /app/code
 WORKDIR /app/code
 
 # copy package.json in isolation to detect changes
-ADD package.json /app/code
+ADD package.json .
 RUN npm install
 
-ADD . /app/code
+ADD . .
 
 ENV PORT 3000
 EXPOSE 3000
 
 ENV DATA_DIRECTORY /app/data/
 
-CMD [ "/app/code/cloudron/start.sh" ]
+CMD [ "cloudron/start.sh" ]
