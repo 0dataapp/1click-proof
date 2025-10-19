@@ -1,4 +1,4 @@
-# 1click-proof
+# oneclick-proof
 
 Sample Node.js app demonstrating how to package for [one-click](https://easyindie.app) deploys to self-hosted panels.
 
@@ -8,32 +8,32 @@ These panels maintain their own 'app catalogs' for one-click installs; until you
 
 ## [Cloudron](https://cloudron.io)
 
-Installing from [the Docker Hub image for Cloudron](https://hub.docker.com/repository/docker/0data/1click-proof/tags/cloudron) is done via the [Cloudron CLI](https://docs.cloudron.io/packaging/cli/).
+Installing from [the Docker Hub image for Cloudron](https://hub.docker.com/repository/docker/0data/oneclick-proof/tags/cloudron) is done via the [Cloudron CLI](https://docs.cloudron.io/packaging/cli/).
 
 First clone the project locally:
 
 ```
-git clone https://github.com/0dataapp/1click-proof
-cd 1click-proof
+git clone https://github.com/0dataapp/oneclick-proof
+cd oneclick-proof
 ```
 
 Then from the project directory, run the `install` command:
 
 ```
-cloudron install --image 0data/1click-proof:cloudron --location 1click-proof
+cloudron install --image 0data/oneclick-proof:cloudron --location oneclick-proof
 ```
 
 Updates are also done from the project directory:
 
 ```
-cloudron update --image 0data/1click-proof:cloudron --app 1click-proof
+cloudron update --image 0data/oneclick-proof:cloudron --app oneclick-proof
 ```
 
 See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for reference. You can also [use Cloudron itself to build and as a registry](https://rosano.ca/log/01hs9tx1ytkp3kb0v03pdpm08a).
 
 ## [Caprover](https://caprover.com)
 
-The simplest way to install [the Docker Hub image for Caprover](https://hub.docker.com/repository/docker/0data/1click-proof/tags/caprover) is:
+The simplest way to install [the Docker Hub image for Caprover](https://hub.docker.com/repository/docker/0data/oneclick-proof/tags/caprover) is:
 
 1. navigate to "Apps" → "Create A New App" → "One-Click Apps/Databases"
 , then search for `>> TEMPLATE <<` or scroll to bottom.
@@ -43,17 +43,17 @@ The simplest way to install [the Docker Hub image for Caprover](https://hub.dock
 captainVersion: 4
 services:
   $$cap_appname:
-    image: 0data/1click-proof:caprover
+    image: 0data/oneclick-proof:caprover
     volumes:
       - $$cap_appname-local:/usr/src/app/__local
     restart: always
 caproverOneClickApp:
   instructions:
-    start: See repository for details https://github.com/0dataapp/1click-proof
-    end: 1click-proof is deployed and available as $$cap_appname. 
-  displayName: 1click-proof
+    start: See repository for details https://github.com/0dataapp/oneclick-proof
+    end: oneclick-proof is deployed and available as $$cap_appname. 
+  displayName: oneclick-proof
   description: Sample Node.js app that can be one-click deployed to self-hosted panels.
-  documentation: See repository for details https://github.com/0dataapp/1click-proof
+  documentation: See repository for details https://github.com/0dataapp/oneclick-proof
 ```
 
 3. name your app as `oneclick-proof` or something else, and then deploy.
@@ -66,15 +66,15 @@ A more complex method is:
 2. check the box for "Has Persistent Data", name your app as `oneclick-proof` or something else, and then click "Create New App".
 3. navigate to your app settings, then "App Configs" → "Persistent Directories".
 4. set "Path in App" to `/usr/src/app/__local` and "Label" to `oneclick-proof-local`; click "Save & Restart".
-5. navigate to "Deployment"; enter `0data/1click-proof:caprover` into "Deploy via ImageName", then click "Deploy"
+5. navigate to "Deployment"; enter `0data/oneclick-proof:caprover` into "Deploy via ImageName", then click "Deploy"
 
 ---
 
 If you want to deploy code directly from your machine without Docker via the CLI:
 
 ```
-git clone https://github.com/0dataapp/1click-proof
-cd 1click-proof
+git clone https://github.com/0dataapp/oneclick-proof
+cd oneclick-proof
 caprover deploy
 ```
 
