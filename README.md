@@ -6,9 +6,9 @@ Each request increments a count that's stored on the local filesystem, which sho
 
 These panels maintain their own 'app catalogs' for one-click installs; until your app is included there, it will require more clicks to setup. Below are instructions for each platform so that you can test easily before submission.
 
-## [Cloudron](https://cloudron.io)
+Many of them also require publishing a Docker image somewhere to install. For simplicity the examples below uses [pre-built images](https://hub.docker.com/repository/docker/0data/oneclick-proof).
 
-Installing from [the Docker Hub image for Cloudron](https://hub.docker.com/repository/docker/0data/oneclick-proof/tags/cloudron) is done via the [Cloudron CLI](https://docs.cloudron.io/packaging/cli/).
+## [Cloudron](https://cloudron.io)
 
 First clone the project locally:
 
@@ -17,7 +17,7 @@ git clone https://github.com/0dataapp/oneclick-proof
 cd oneclick-proof
 ```
 
-Then from the project directory, run the `install` command:
+Then from the project directory, run the `install` command via the [Cloudron CLI](https://docs.cloudron.io/packaging/cli/):
 
 ```
 cloudron install --image 0data/oneclick-proof:cloudron --location oneclick-proof
@@ -33,7 +33,7 @@ See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for r
 
 ## [Caprover](https://caprover.com)
 
-The simplest way to install [the Docker Hub image for Caprover](https://hub.docker.com/repository/docker/0data/oneclick-proof/tags/caprover) is:
+The simplest way to install involves a docker-compose file:
 
 1. navigate to "Apps" → "Create A New App" → "One-Click Apps/Databases"
 , then search for `>> TEMPLATE <<` or scroll to bottom.
@@ -42,7 +42,7 @@ The simplest way to install [the Docker Hub image for Caprover](https://hub.dock
 
 ---
 
-A more complex method is:
+A more complex method is to manually set the persistent directories:
 
 1. navigate to "Apps" → "Create A New App".
 2. check the box for "Has Persistent Data", name your app as `oneclick-proof` or something else, and then click "Create New App".
@@ -52,7 +52,7 @@ A more complex method is:
 
 ---
 
-If you want to deploy code directly from your machine without Docker via the CLI:
+If you want to deploy code directly from your machine without Docker via the [Caprover CLI](https://caprover.com/docs/cli-commands.html):
 
 ```
 git clone https://github.com/0dataapp/oneclick-proof
@@ -60,7 +60,7 @@ cd oneclick-proof
 caprover deploy
 ```
 
-More info:
+More info on packaging and deployment:
 
 - [Captain Definition File](https://caprover.com/docs/captain-definition-file.html)
 - [Deployment Methods](https://caprover.com/docs/deployment-methods.html)
