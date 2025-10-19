@@ -35,7 +35,7 @@ See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for r
 
 The simplest way to install [the Docker Hub image for Caprover](https://hub.docker.com/repository/docker/0data/1click-proof/tags/caprover) is:
 
-1. navigate to "Apps" → "Create A New App" → https://captain.cloud3.rosano.ca/#/apps/details/oneclick-proof
+1. navigate to "Apps" → "Create A New App" → "One-Click Apps/Databases"
 , then search for `>> TEMPLATE <<` or scroll to bottom.
 2. select the ">> TEMPLATE <<" app and paste the following configuration:
 
