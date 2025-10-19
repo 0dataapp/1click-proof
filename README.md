@@ -37,25 +37,7 @@ The simplest way to install [the Docker Hub image for Caprover](https://hub.dock
 
 1. navigate to "Apps" → "Create A New App" → "One-Click Apps/Databases"
 , then search for `>> TEMPLATE <<` or scroll to bottom.
-2. select the ">> TEMPLATE <<" app and paste the following configuration:
-
-```yaml
-captainVersion: 4
-services:
-  $$cap_appname:
-    image: 0data/oneclick-proof:caprover
-    volumes:
-      - $$cap_appname-local:/usr/src/app/__local
-    restart: always
-caproverOneClickApp:
-  instructions:
-    start: See repository for details https://github.com/0dataapp/oneclick-proof
-    end: oneclick-proof is deployed and available as $$cap_appname. 
-  displayName: oneclick-proof
-  description: Sample Node.js app that can be one-click deployed to self-hosted panels.
-  documentation: See repository for details https://github.com/0dataapp/oneclick-proof
-```
-
+2. select the ">> TEMPLATE <<" app and paste the configuration from `caprover/compose.yml`.
 3. name your app as `oneclick-proof` or something else, and then deploy.
 
 ---
