@@ -60,6 +60,13 @@ cd oneclick-proof
 caprover deploy
 ```
 
+More info:
+
+- [Captain Definition File](https://caprover.com/docs/captain-definition-file.html)
+- [Deployment Methods](https://caprover.com/docs/deployment-methods.html)
+- [Persistent Apps](https://caprover.com/docs/persistent-apps.html)
+- [How to Run Docker Compose on CapRover](https://caprover.com/docs/docker-compose.html#how-to-run-docker-compose-on-caprover)
+
 ## Questions
 
 Feel free to reach out on [Mastodon](https://rosano.ca/mastodon) or [Bluesky](https://rosano.ca/bluesky).
