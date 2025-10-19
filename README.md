@@ -42,7 +42,7 @@ The simplest way to install involves a docker-compose file:
 
 ---
 
-A more complex method is to manually set the persistent directories:
+Without a docker-compose file, you need to manually configure persistence:
 
 1. navigate to "Apps" → "Create A New App".
 2. check the box for "Has Persistent Data", name your app as `oneclick-proof` or something else, and then click "Create New App".
@@ -52,7 +52,7 @@ A more complex method is to manually set the persistent directories:
 
 ---
 
-If you want to deploy code directly from your machine without Docker via the [Caprover CLI](https://caprover.com/docs/cli-commands.html):
+There are a variety of other [deployment methods](https://caprover.com/docs/deployment-methods.html), including deploying code directly from your machine without publishing a Docker image via the [Caprover CLI](https://caprover.com/docs/cli-commands.html):
 
 ```
 git clone https://github.com/0dataapp/oneclick-proof
@@ -61,9 +61,7 @@ caprover deploy
 ```
 
 More info on packaging and deployment:
-
 - [Captain Definition File](https://caprover.com/docs/captain-definition-file.html)
-- [Deployment Methods](https://caprover.com/docs/deployment-methods.html)
 - [Persistent Apps](https://caprover.com/docs/persistent-apps.html)
 - [How to Run Docker Compose on CapRover](https://caprover.com/docs/docker-compose.html#how-to-run-docker-compose-on-caprover)
 
