@@ -3,13 +3,13 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 
+const date = new Date();
+
 const data = {
   count: 0,
-  dateCreated: new Date(),
+  dateCreated: date,
 };
 const dataPath = path.join(process.env.DATA_DIRECTORY || __dirname, '__local', 'data.json');
-
-const restartDate = new Date();
 
 function uSerial2 (inputData) {
   return inputData.reduce(async function (coll, e) {
@@ -35,7 +35,7 @@ const mod = {
       'Hello!',
       'Request time: ' + new Date().toJSON(),
       'Total requests: ' + data.count,
-      'Last restart: ' + restartDate.toJSON(),
+      'Last restart: ' + date.toJSON(),
       'First start: ' + data.dateCreated,
     ].join('\n\n'));
     fs.writeFileSync(dataPath, JSON.stringify(data));
