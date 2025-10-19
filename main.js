@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 
 const data = {
   count: 0,
+  dateCreated: new Date(),
 };
 const dataPath = path.join(process.env.DATA_DIRECTORY || __dirname, '__local', 'data.json');
 
@@ -35,6 +36,7 @@ const mod = {
       'Request time: ' + new Date().toJSON(),
       'Total requests: ' + data.count,
       'Last restart: ' + restartDate.toJSON(),
+      'First start: ' + data.dateCreated,
     ].join('\n\n'));
     fs.writeFileSync(dataPath, JSON.stringify(data));
   },
