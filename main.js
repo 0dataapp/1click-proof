@@ -8,6 +8,8 @@ const data = {
 };
 const dataPath = path.join(process.env.DATA_DIRECTORY || __dirname, '__local', 'data.json');
 
+const restartDate = new Date();
+
 function uSerial2 (inputData) {
   return inputData.reduce(async function (coll, e) {
     return (await coll).concat(await new Promise(function (res, rej) {
@@ -32,6 +34,7 @@ const mod = {
       'Hello!',
       'Request time: ' + new Date().toJSON(),
       'Total requests: ' + data.requests,
+      'Last restart: ' + restartDate.toJSON(),
     ].join('\n\n'));
     fs.writeFileSync(dataPath, JSON.stringify(data));
   },
