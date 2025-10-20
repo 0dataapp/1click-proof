@@ -46,7 +46,7 @@ See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for r
 2. check the box for "Has Persistent Data", name your app as `oneclick-proof` or something else, and then click "Create New App".
 3. navigate to your app settings, then "App Configs" → "Persistent Directories".
 4. set "Path in App" to `/usr/src/app/__local` and "Label" to `oneclick-proof-local`; click "Save & Restart".
-5. navigate to "Deployment"; enter `0data/oneclick-proof:caprover` into "Deploy via ImageName", then click "Deploy"
+5. navigate to "Deployment"; enter `0data/oneclick-proof:latest` into "Deploy via ImageName", then click "Deploy"
 
 ### other ways
 

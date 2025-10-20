@@ -5,7 +5,7 @@
 
 services:
   app:
-    image: 0data/oneclick-proof:caprover
+    image: 0data/oneclick-proof:latest
     environment:
       - DATA_DIRECTORY=/data
     volumes:
