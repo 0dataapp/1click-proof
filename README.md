@@ -64,6 +64,36 @@ More info on packaging and deployment:
 - [How to Run Docker Compose on CapRover](https://caprover.com/docs/docker-compose.html#how-to-run-docker-compose-on-caprover)
 - [Example packages](https://github.com/caprover/one-click-apps/tree/master/public/v4/apps)
 
+## [Coolify](https://coolify.io)
+
+### via public Git repository:
+
+1. navigate to "Projects" → choose/create a project… → "Resources" → "+ New" → "Applications" → "Git Based" → "Public Repository"
+2. configure as follows:
+	- Repository URL:
+		
+		```
+		https://github.com/0dataapp/oneclick-proof/tree/master
+		```
+	
+	- Build Pack:
+		
+		```
+		Docker Compose
+		```
+	
+	- Docker Compose Location:
+		
+		```
+		/coolify/compose.yml
+		```
+3. select "Continue" and then, on the following "Configuration" page, click "Deploy".
+4. setup a domain under "Configuration" → "General" → "Domains" by entering something like `https://oneclick-proof.[your root domain]` and clicking "Save", or make a random one by clicking "Generate Domain"; in case of [SSL issues](https://coolify.io/docs/troubleshoot/dns-and-domains/lets-encrypt-not-working) click "Redeploy".
+
+More information:
+- [Adding a new service template to Coolify](https://coolify.io/docs/get-started/contribute/service)
+- [Coolify Examples](https://github.com/coollabsio/coolify-examples/)
+
 ## Questions
 
 Feel free to reach out on [Mastodon](https://rosano.ca/mastodon) or [Bluesky](https://rosano.ca/bluesky).
