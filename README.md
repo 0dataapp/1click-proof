@@ -62,6 +62,7 @@ More info on packaging and deployment:
 - [Captain Definition File](https://caprover.com/docs/captain-definition-file.html)
 - [Persistent Apps](https://caprover.com/docs/persistent-apps.html)
 - [How to Run Docker Compose on CapRover](https://caprover.com/docs/docker-compose.html#how-to-run-docker-compose-on-caprover)
+- [Example packages](https://github.com/caprover/one-click-apps/tree/master/public/v4/apps)
 
 ## Questions
 
