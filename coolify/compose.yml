@@ -1,7 +1,7 @@
 # documentation: https://github.com/0dataapp/oneclick-proof
 # slogan: Simple Node.js app demonstrating how to package for one-click deploys to self-hosted panels.
 # logo: identity.svg
-# port: 80
+# port: 3000
 
 services:
   app:
