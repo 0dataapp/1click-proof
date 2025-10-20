@@ -1,0 +1,19 @@
+# documentation: https://github.com/0dataapp/oneclick-proof
+# slogan: Simple Node.js app demonstrating how to package for one-click deploys to self-hosted panels.
+# logo: identity.svg
+# port: 80
+
+services:
+  app:
+    image: 0data/oneclick-proof:caprover
+    environment:
+      - DATA_DIRECTORY=/data
+    volumes:
+      - ${COOLIFY_VOLUME_APP}:/data
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - 'wget -qO- http://127.0.0.1:80'
+      interval: 5s
+      timeout: 20s
+      retries: 10
