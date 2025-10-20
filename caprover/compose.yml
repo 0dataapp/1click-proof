@@ -10,6 +10,5 @@ caproverOneClickApp:
     start: See repository for details https://github.com/0dataapp/oneclick-proof
     end: oneclick-proof is deployed and available as $$cap_appname. 
   displayName: oneclick-proof
-  description: Sample Node.js app that can be one-click deployed to self-hosted panels.
+  description: Simple Node.js app that can be one-click deployed to self-hosted panels.
   documentation: See repository for details https://github.com/0dataapp/oneclick-proof
-  
