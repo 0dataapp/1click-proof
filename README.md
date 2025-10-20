@@ -33,16 +33,14 @@ See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for r
 
 ## [Caprover](https://caprover.com)
 
-The least amount of steps to install involves a docker-compose file:
+### with docker-compose:
 
 1. navigate to "Apps" → "Create A New App" → "One-Click Apps/Databases"
 , then search for `>> TEMPLATE <<` or scroll to bottom.
 2. select the ">> TEMPLATE <<" app and paste the configuration from `caprover/compose.yml`.
 3. name your app as `oneclick-proof` or something else, and then deploy.
 
----
-
-Without a docker-compose file, you need to manually configure persistence:
+### without docker-compose:
 
 1. navigate to "Apps" → "Create A New App".
 2. check the box for "Has Persistent Data", name your app as `oneclick-proof` or something else, and then click "Create New App".
@@ -50,7 +48,7 @@ Without a docker-compose file, you need to manually configure persistence:
 4. set "Path in App" to `/usr/src/app/__local` and "Label" to `oneclick-proof-local`; click "Save & Restart".
 5. navigate to "Deployment"; enter `0data/oneclick-proof:caprover` into "Deploy via ImageName", then click "Deploy"
 
----
+### other ways
 
 There are a variety of other [deployment methods](https://caprover.com/docs/deployment-methods.html), including deploying code directly from your machine without publishing a Docker image via the [Caprover CLI](https://caprover.com/docs/cli-commands.html):
 
