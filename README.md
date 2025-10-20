@@ -1,8 +1,8 @@
 # oneclick-proof
 
-Sample Node.js app demonstrating how to package for [one-click](https://easyindie.app) deploys to self-hosted panels.
+Simple Node.js app demonstrating how to package for [one-click](https://easyindie.app) deploys on self-hosted panels.
 
-Each request increments a count that's stored on the local filesystem, which should persist between restarts; set the destination directory via a `DATA_DIRECTORY` environment variable.
+Each request increments a count that's stored on the local filesystem, which should persist between restarts; set the destination directory path via a `DATA_DIRECTORY` environment variable.
 
 These panels maintain their own 'app catalogs' for one-click installs; until your app is included there, it will require more clicks to setup. Below are instructions for each platform so that you can test easily before submission.
 
@@ -33,7 +33,7 @@ See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for r
 
 ## [Caprover](https://caprover.com)
 
-The simplest way to install involves a docker-compose file:
+The least amount of steps to install involves a docker-compose file:
 
 1. navigate to "Apps" → "Create A New App" → "One-Click Apps/Databases"
 , then search for `>> TEMPLATE <<` or scroll to bottom.
