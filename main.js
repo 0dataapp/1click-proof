@@ -37,6 +37,7 @@ const mod = {
       'Total requests: ' + data.count,
       'Last restart: ' + date.toJSON(),
       'First start: ' + data.dateCreated,
+      'Source code: https://github.com/0dataapp/oneclick-proof',
     ].join('\n\n'));
     fs.writeFileSync(dataPath, JSON.stringify(data));
   },
