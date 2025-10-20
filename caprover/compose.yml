@@ -5,6 +5,8 @@ services:
     volumes:
       - $$cap_appname-local:/usr/src/app/__local
     restart: always
+    caproverExtra:
+      containerHttpPort: 3000
 caproverOneClickApp:
   instructions:
     start: See repository for details https://github.com/0dataapp/oneclick-proof
