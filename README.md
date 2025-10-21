@@ -102,7 +102,7 @@ Update by clicking "Redeploy" or "Advanced" → "Force deploy (without cache)" t
 
 More information:
 - [Adding a new service template to Coolify](https://coolify.io/docs/get-started/contribute/service)
-- [Coolify Examples](https://github.com/coollabsio/coolify-examples/)
+- [Coolify examples](https://github.com/coollabsio/coolify-examples/)
 - [Coolify official packages](https://github.com/coollabsio/coolify/tree/v4.x/templates/compose)
 
 ## Questions
