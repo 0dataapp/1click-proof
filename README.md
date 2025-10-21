@@ -74,7 +74,7 @@ More info on packaging and deployment:
 
 ## [Coolify](https://coolify.io)
 
-### via public Git repository:
+Install by using the public Git repository:
 
 1. navigate to "Projects" → choose/create a project… → "Resources" → "+ New" → "Applications" → "Git Based" → "Public Repository"
 2. configure as follows:
@@ -97,6 +97,8 @@ More info on packaging and deployment:
 		```
 3. select "Continue" and then, on the following "Configuration" page, click "Deploy".
 4. setup a domain under "Configuration" → "General" → "Domains" by entering something like `https://oneclick-proof.[your root domain]` and clicking "Save", or make a random one by clicking "Generate Domain"; in case of [SSL issues](https://coolify.io/docs/troubleshoot/dns-and-domains/lets-encrypt-not-working) click "Redeploy".
+
+Update by clicking "Redeploy" or "Advanced" → "Force deploy (without cache)" to pull from the Git repository.
 
 More information:
 - [Adding a new service template to Coolify](https://coolify.io/docs/get-started/contribute/service)
