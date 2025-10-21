@@ -29,7 +29,7 @@ Updates are also done from the project directory:
 cloudron update --image 0data/oneclick-proof:cloudron --app oneclick-proof
 ```
 
-See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for reference. You can also [use Cloudron itself to build and as a registry](https://rosano.ca/log/01hs9tx1ytkp3kb0v03pdpm08a).
+See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) or [Cloudron official packages](https://git.cloudron.io/packages) for reference. You can also [use Cloudron itself to build and as a registry](https://rosano.ca/log/01hs9tx1ytkp3kb0v03pdpm08a).
 
 ## [Caprover](https://caprover.com)
 
@@ -70,7 +70,7 @@ More info on packaging and deployment:
 - [Captain Definition File](https://caprover.com/docs/captain-definition-file.html)
 - [Persistent Apps](https://caprover.com/docs/persistent-apps.html)
 - [How to Run Docker Compose on CapRover](https://caprover.com/docs/docker-compose.html#how-to-run-docker-compose-on-caprover)
-- [Example packages](https://github.com/caprover/one-click-apps/tree/master/public/v4/apps)
+- [Caprover official packages](https://github.com/caprover/one-click-apps/tree/master/public/v4/apps)
 
 ## [Coolify](https://coolify.io)
 
@@ -103,6 +103,7 @@ Update by clicking "Redeploy" or "Advanced" → "Force deploy (without cache)" t
 More information:
 - [Adding a new service template to Coolify](https://coolify.io/docs/get-started/contribute/service)
 - [Coolify Examples](https://github.com/coollabsio/coolify-examples/)
+- [Coolify official packages](https://github.com/coollabsio/coolify/tree/v4.x/templates/compose)
 
 ## Questions
 
