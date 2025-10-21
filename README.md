@@ -46,16 +46,24 @@ See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) for r
 2. check the box for "Has Persistent Data", name your app as `oneclick-proof` or something else, and then click "Create New App".
 3. navigate to your app settings, then "App Configs" → "Persistent Directories".
 4. set "Path in App" to `/usr/src/app/__local` and "Label" to `oneclick-proof-local`; click "Save & Restart".
-5. navigate to "Deployment"; enter `0data/oneclick-proof:latest` into "Deploy via ImageName", then click "Deploy"
+5. see the update command below to finalize.
 
-### other ways
+### updates and other ways to deploy
 
-There are a variety of other [deployment methods](https://caprover.com/docs/deployment-methods.html), including deploying code directly from your machine without publishing a Docker image via the [Caprover CLI](https://caprover.com/docs/cli-commands.html):
+To update an existing app: navigate to "Deployment", enter `0data/oneclick-proof:latest` into "Deploy via ImageName", then click "Deploy".
+
+Other [deployment methods](https://caprover.com/docs/deployment-methods.html), include uploading a `.tar` file and deploying code directly from your machine without publishing a Docker image via the [Caprover CLI](https://caprover.com/docs/cli-commands.html):
 
 ```
 git clone https://github.com/0dataapp/oneclick-proof
 cd oneclick-proof
 caprover deploy
+```
+
+To update via the CLI using the last used configuration:
+
+```
+caprover deploy -d
 ```
 
 More info on packaging and deployment:
