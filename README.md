@@ -52,6 +52,8 @@ See the [packaging tutorial](https://docs.cloudron.io/packaging/tutorial/) or [C
 
 To update an existing app: navigate to "Deployment", enter `0data/oneclick-proof:latest` into "Deploy via ImageName", then click "Deploy".
 
+You may want to enable "Force HTTPS by redirecting all HTTP traffic to HTTPS".
+
 Other [deployment methods](https://caprover.com/docs/deployment-methods.html), include uploading a `.tar` file and deploying code directly from your machine without publishing a Docker image via the [Caprover CLI](https://caprover.com/docs/cli-commands.html):
 
 ```
